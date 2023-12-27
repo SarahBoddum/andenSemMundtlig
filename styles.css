@@ -1,0 +1,2268 @@
+*{
+    margin: 0;
+    padding: 0; 
+    top: 0;
+}
+@font-face {
+    font-family: handwriting;
+    src: url(images/hathem-bosteem/Hathem\ Bosteem.ttf);
+  }
+.mobil{
+    display: none;
+}
+.laptop{
+    display: block;
+}
+body{
+    overflow-x: hidden;
+    font-family: sans-serif;
+    background-color: #fcfbfa;
+  }
+  body.bodyoverlay {
+    overflow: hidden;
+   
+  }
+h1{
+    font-family:'Abril Fatface', serif;
+    font-size: 10vw;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+.vertikal-h1{
+  writing-mode: vertical-rl;
+
+  font-size: 8vw;
+  
+}
+h2{
+    font-family: handwriting;
+    font-size: 6vw;
+    margin-top: -10vh;
+    font-weight: lighter;
+}
+
+.vertikal-h2{
+  writing-mode: vertical-rl;
+  font-size: 8vw;
+  
+}
+
+h3{
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 2vw;
+}
+p{
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  line-height: 150%;
+  font-size: 1.2vw;
+}
+a{
+  font-family: 'Lato', sans-serif;
+}
+
+.button{
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2vw;
+  font-weight: lighter;
+  background-color: #fce4f1;
+  opacity: 80%;
+  padding: 1.5% 8% 1% 8%;
+  border: solid black 1px;
+  color: #000;
+  text-decoration: none;
+  width: fit-content;
+}
+.button:hover{
+  background-color: #faf1f6;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+li{
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter;
+  line-height: 150%;
+  font-size: 1.2vw;
+}
+/*--------header-----------------*/
+header{
+    width: 100%;
+    height: 120px;
+    background-color: #fcfbfa;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    padding-bottom: 25px;
+}
+#rabatdut{
+    height: 22px;
+    width: 100%;
+    padding-top: 3px;
+    background-color: #fce4f1;
+    display: flex;
+    justify-content: center;
+}
+
+#tidligereUL{
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    
+}
+
+#logo{
+    width: 40%;
+    margin-left: 30%;
+
+}
+#booking{
+    background-color: #fce4f1;
+    border: solid 0.5px black;
+    padding: 3px 12px
+}
+#menu a {
+    color: #000;
+    display: block;
+    font-size: 1.2vw;
+    text-decoration: none;
+}
+#menu a:hover{
+    transition: 0.3s ease;
+    text-decoration: underline;
+   
+}
+#booking:hover{
+    background-color: #faf1f6;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.dropdown-list{
+    color: black;
+    position: absolute;
+    z-index: 1;
+    text-align: left;
+    padding: 20px;
+    background-color: #fcfbfa;
+  }
+.dropdown-list a{
+    font-size: 8px;
+    margin-top: 10px;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content{
+    margin-top: 40%;
+    display:none;
+    color: black;
+    position: absolute;
+    height: fit-content;
+    z-index: 1;
+    min-width: 240px;
+    background-color:  #fcfbfa;
+    text-align: left;
+    font-size: 15px;
+    padding: 10px;
+}
+.hand{
+  margin-top: 30%;
+}
+.dropdown-content a:hover{
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+}
+.dropdown:hover .dropdown-content{
+    display: block;   
+}
+
+/*---------index---------------*/
+#forsidediv{
+  width: 100%;
+  height: auto;
+  background-image: url(images/Lforside.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 20vh;
+  margin-bottom: 12vh;
+}
+#forsideh1-1{
+  padding-top:25vh;
+  text-align: center;
+  font-size: 7vw;
+}
+#forsideh2-1{
+  font-size: 4vw;
+  text-align: center;
+  margin-top: -5vh;
+}
+#forsidebtndiv{
+  width: 40%;
+  margin-left: 27%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70vh;
+}
+.forsidebtn{
+  width: 20%;
+  height: 3vh;
+  text-align: center;
+}
+.forsidebtn:hover{
+  background-color: #faf1f6;
+    transition: 0.3s ease-in-out;
+    text-decoration: none;
+}
+/*billedeflipflop*/
+#flipflopogtext{
+  width: 80%;
+  margin: auto;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 20vh;
+}
+#flipflopramme{
+  width: 70%;
+  height: auto;
+  
+}
+#fliptext{
+  width: 30%;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  padding-top: 25vh;
+}
+
+/*rammeEt*/
+#rammeEt{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  margin: 0 auto;
+}
+#rammeTo{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  margin: 0 auto;
+  
+}
+
+#rammeTre{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  margin: 0 auto;
+ 
+}
+#rammeFire{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: fit-content;
+  margin: 0 auto;
+  
+}
+.Etpic{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 80vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-animation: fade 20s infinite;
+  animation: fade 20s infinite;
+}
+.Topic{
+  position: absolute;
+  top: 0;
+  left: 25%;
+  width: 25%;
+  height: 80vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-animation: fade 20s infinite;
+  animation: fade 20s infinite;
+}
+.Trepic{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 25%;
+  height: 80vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-animation: fade 20s infinite;
+  animation: fade 20s infinite;
+}
+
+.Firepic{
+  position: absolute;
+  top: 0;
+  left: 75%;
+  width: 25%;
+  height: 80vh;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-animation: fade 20s infinite;
+  animation: fade 20s infinite;
+}
+#Etpic-1{
+  animation-delay: 0s;
+  background-image: url(images/Lflip1-1.jpg);
+}
+#Etpic-2{
+  animation-delay: 5s;
+  background-image: url(images/Lflip2-1.jpg);
+}
+#Etpic-3{
+  animation-delay: 10s;
+  background-image: url(images/Lflip3-1.jpg);
+}
+#Etpic-4{
+  animation-delay: 15s;
+  background-image: url(images/Mflip4-1.jpg);
+}
+
+
+#Topic-1{
+  animation-delay: 0s;
+  background-image: url(images/Lflip1-2.jpg);
+}
+#Topic-2{
+  animation-delay: 5s;
+  background-image: url(images/Lflip2-2.jpg);
+}
+#Topic-3{
+  animation-delay: 10s;
+  background-image: url(images/Lflip3-2.jpg);
+}
+#Topic-4{
+  animation-delay: 15s;
+  background-image: url(images/Lflip4-2.jpg);
+}
+
+#Trepic-1{
+  animation-delay: 0s;
+  background-image: url(images/Lflip1-3.jpg);
+}
+#Trepic-2{
+  animation-delay: 5s;
+  background-image: url(images/Lflip2-3.jpg);
+}
+#Trepic-3{
+  animation-delay: 10s;
+  background-image: url(images/Lflip3-3.jpg);
+}
+#Trepic-4{
+  animation-delay: 15s;
+  background-image: url(images/Lflip4-3.jpg);
+}
+
+#Firepic-1{
+  animation-delay: 0s;
+  background-image: url(images/Lflip1-4.jpg);
+}
+#Firepic-2{
+  animation-delay: 5s;
+  background-image: url(images/Lflip2-4.jpg);
+}
+#Firepic-3{
+  animation-delay: 10s;
+  background-image: url(images/Lflip3-4.jpg);
+}
+#Firepic-4{
+  animation-delay: 15s;
+  background-image: url(images/Lflip4-4.jpg);
+}
+
+@-webkit-keyframes fade{
+  0%{
+    opacity: 1;
+  }
+  20%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 0;
+  }
+  95%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes fade{
+  0%{
+    opacity: 1;
+  }
+  20%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 0;
+  }
+  95%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+
+
+
+#studierabat{
+  width: 100%;
+  height: auto;
+  background-image: url(images/PSaNeglecutout.png);
+  background-size: 70%;
+  background-position: right;
+  margin-top: 30vh;
+  background-repeat: no-repeat;
+  margin-bottom: 10vh;
+}
+#forsideh1-2{
+  font-size: 10vw;
+  margin-left: 10%;
+}
+#forsideh2-2{
+  margin-left: 20%;
+  margin-top: -5vh;
+  padding-bottom: 40vh;
+}
+.firepastribe{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12vh;
+}
+.testimonial{
+  width: 17%;
+}
+.cirkeltesti{
+  width: 100%;
+  border-radius: 50%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 3vh;
+}
+.centreretP{
+  text-align: center;
+  margin-top: 2vh;
+}
+
+
+#forsideh1-3{
+  margin-left: 12%;
+  font-size: 8vw;
+}
+#forsideh2-3{
+  margin-left: 25%;
+  margin-bottom: -5vh;
+  z-index: 2;
+}
+.tiktokvideo{
+  margin-top:3vh;
+  width: 20%;
+  height: 50vh;
+  object-fit: cover;
+  z-index: 1;
+  filter:grayscale(30%);
+}
+
+.tiktokvideo:hover{
+  filter:grayscale(0%);
+}
+
+#blivinspireret{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.inspopic{
+  width: 47%;
+  height: auto;
+}
+#instasection{
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+}
+#instasection h1{
+  font-size: 7vw;
+}
+#instasection h2{
+  margin-top: -8.5vh;
+  margin-left: 7vw;
+}
+#inspobtn{
+  width: 20%;
+  height: 4vh;
+  margin: auto;
+
+}
+#forskudth1{
+  margin-left: 30%;
+  margin-bottom: -2vh;
+}
+
+
+.laesmere{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  margin-top: 20vh;
+  margin-bottom: 25vh;
+}
+#trepics{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  height: 100%;
+}
+.posrelcontainer{
+  position: relative;
+  width: 30%;
+  height: auto;
+}
+.laesmerepic{
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  position: absolute;
+}
+.posabsbtn{
+  text-align: center;
+  height: 4vh;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  margin-left: 15%;
+  margin-top: 65vh;
+  padding-top: 1vh;
+}
+
+
+/*------------om neglementet.------------*/
+#omliva{
+  margin-top:22vh;
+  width: 100%;
+  display: flex;
+}
+
+#omneglementet{
+  padding-left:9%;
+  width: 40%;
+  background-image: url(images/swatch.jpg);
+  background-size: 85% 55%;
+  background-repeat: no-repeat;
+  background-position-x:50%;
+  background-position-y: 10vh;
+}
+
+#omneglementet h2{
+  margin-top: 5vh;
+  font-size: 5vw;
+  margin-left:33vh;
+}
+
+#omneglementet h1{
+  margin-top: -7vh;
+  margin-bottom: 2vh;
+  font-size: 5vw;
+}
+
+#livabillede img{
+  margin-left:15%;
+  width:85%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*- Shellac -*/
+
+#shellac{
+  width: 95%;
+  margin-right: 5%;
+  padding-top: 10vh;
+  display: flex;
+  background-image: url(images/CNDshellac.png);
+  background-size: 55%;
+  background-position-x: 0%;
+  background-position-y: 16vh;
+  background-repeat: no-repeat;
+}
+
+#omshellac p{
+  padding-left:15%;
+}
+
+#omshellac{
+  width: 60%;
+  margin-left: 35%;
+}
+
+#omshellac h2{
+  margin-top: 5vh;
+}
+
+/*- brisa gel -*/
+
+#brisagel{
+  width: 95%;
+  margin-left: 5%;
+  display: flex;
+  background-image: url(images/BrisaGel.png);
+  background-size: 59%;
+  background-position-x: 140%;
+  background-position-y:5vh;
+  background-repeat: no-repeat;
+
+}
+
+#ombrisagel{
+  width: 60%;
+  background-image: url(images/swatch.jpg);
+  background-size: 62% 35%;
+  background-repeat: no-repeat;
+  background-position-x:10%;
+  background-position-y: 46vh;
+}
+
+#ombrisagel p{
+  padding-left:10%;
+  padding-bottom: 15%;
+}
+
+#ombrisagel h2{
+  margin-top: 15vh;
+}
+
+/*- betingelser -*/
+
+
+#betingelser{
+  width: 100%;
+  display: flex;
+}
+
+#ombetingelser{
+  padding-left:9%;
+  width: 75%;
+  margin-bottom: 5%;
+}
+
+#ombetingelser h1{
+  margin-bottom: 2vh;
+  font-size: 3.3vw;
+}
+
+#ombetingelser p {
+  margin-bottom:4vh;
+}
+
+#ombetingelser ul{
+  padding-left:1.7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1vh;
+}
+#underpunkter{
+  padding-left:2%;
+  
+  gap: 0%;
+}
+
+
+/*----------håndbogen laptop----------*/
+
+#handbogbillede{
+  width: 100%;
+  height:auto;
+  background-image: url(images/Lannasløjfecutout.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 20vw;
+  margin-top: 10vw;
+  padding-top: 15vw;
+}
+
+#plejebillede{
+  width: 100%;
+  height:auto;
+  background-image: url(images/lipstickanna.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 20vw;
+  margin-top: 10vw;
+  padding-top: 25vw;
+}
+
+#h2over{
+  text-align: center;
+  margin-bottom: -6vw;
+  margin-left: 15vw;
+  color: #fff;
+}
+
+#h1under{
+  text-align: center;
+  font-size: 10vw;
+  color: #fff;
+}
+
+#handbogh1{
+  font-size: 9vw;
+}
+
+#handbogh1-1{
+  font-size: 7vw;
+  margin-left: 15vw;
+}
+
+#handbogh1-2{
+  font-size: 7vw;
+}
+
+#handbogh1-3{
+  font-size: 8vw;
+}
+
+#handbogh1-4{
+  font-size: 7.5vw;
+  text-align: right;
+  margin-bottom: -5vw;
+  margin-right: 25vw;
+  line-height: 8vw;
+}
+
+#handbogh1-5{
+  font-size: 8vw;
+}
+
+#handbogh2{
+  font-size: 5vw;
+  margin-left: 5vw;
+  margin-top: -6vw;
+}
+
+#handbogh2-1{
+  font-size: 6vw;
+  margin-top: 2vw;
+  z-index:2;
+  margin-left: 4vw;
+}
+
+#handbogh2-2{
+  font-size: 5vw;
+  margin-top: -6vw;
+  margin-left: 40vw;
+  margin-bottom: -8vw;
+}
+
+#handbogh2-3{
+  font-size: 5vw;
+  margin-top: -4vw;
+  margin-right: 3vw;
+}
+
+#handbogh2-5{
+  text-align: center;
+  font-size: 6vw;
+  margin-left: 18vw;
+}
+
+#underline{
+  text-decoration: underline;
+}
+
+#billedestr1{
+  width: 70%;
+  height: auto;
+  margin-left: -3vw;
+}
+
+#billedestr2{
+  width:90%;
+  margin-top: -3vw;
+}
+
+#billedestr3{
+  width:90%;
+  margin-left: 3vw;
+}
+
+#billedestr4{
+  width: 90%;
+  margin:auto;
+}
+
+#aftagning{
+  padding-right: 3vw;
+}
+
+#blaboks{
+  background-image: url(images/swatch.jpg);
+  background-size: 73vw 25vw;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+}
+
+#plejehånd{
+  width: 130%;
+  margin-left: -6vw;
+  margin-top: -3vw;
+}
+
+#negleformerbaggrund{
+  width: 100%;
+  height:33vw;
+  background-image: url(images/negleformer.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top:-3vw;
+}
+
+.handbogcenter{
+  text-align: center;
+}
+
+.fit{
+  width:90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:7vw;
+}
+
+.kolonner{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 4vw;
+}
+
+.reversekolonner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.halvkolonne{
+  width:48%;
+  height: auto;
+  padding-right:1vw;
+  display:flex;
+}
+
+.lillekolonne{
+  width: 36%;
+  height:auto;
+ 
+}
+
+.storkolonne{
+  width: 60%;
+  height: auto;
+  padding-right: 1vw;
+  margin:auto;
+}
+
+.storkolonnehøjre{
+  width: 60%;
+  height: auto;
+  padding-right: 1vw;
+  margin:auto;
+  text-align: right;
+}
+
+.color-box{
+width: 90%;
+height: auto;
+margin-top: 3vw;
+background-color: #F5F8FD;
+display: flex;
+flex-wrap: wrap;
+padding: 6vw 4vw 4vw 6vw;
+}
+
+.color-box.hidden {
+display: none;
+}
+
+.farveknap{
+  background-color: #fcfbfa;
+  border: none;
+  margin-left: 1vw;
+}
+
+#farvebeskrivelse{
+  margin:auto;
+}
+
+.neglefarve{
+  width: 7vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.neglefarve1{
+  width: 6.8vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.plejeguidekolonner{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  
+}
+
+.plejeguidereversekolonner{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  
+}
+
+.plejeguidevenstre{
+  width: 45%;
+  height: auto;
+  padding-right: 1vw;
+  text-align: right;
+}
+
+.plejeguidehøjre{
+  width: 45%;
+  height: auto;
+  padding-right: 1vw;
+  text-align: left;
+}
+
+.plejeguidegifhøjre{
+  width: 26%;
+  padding-right: 1vw;
+}
+
+.plejeguidegifvenstre{
+  width: 26%;
+  padding-right: 1vw;
+}
+
+.h1plejeguide{
+  font-size: 7vw;
+}
+
+.h2plejeguide{
+  font-size: 5vw;
+  margin-top: -8vh;
+}
+
+#tipnr1{
+  background-image: url(video/olieanimation.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 26vw;
+}
+
+#tipnr2{
+  background-image: url(video/dåsenegle.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 100%;
+  height: 31vw;
+}
+
+#tipnr3{
+  background-image: url(video/gummigif.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 86%;
+  height: 31vw;
+}
+
+#tipnr4{
+  background-image: url(video/liftegif.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 100%;
+  height: 31vw;
+}
+
+#tipnr5{
+  background-image: url(video/filegif.gif);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 100%;
+  height: 31vw;
+}
+/*------håndbogen mobil---------*/
+@media only screen and (max-width: 992px){
+  #handbogbillede{
+    background-image: url(images/Mannasløjfecutout.png);
+    padding-top: 40vw;
+    padding-bottom: 90vw;
+  }
+
+  #h2over{
+    margin-bottom: -10vw;
+    margin-left: 15vw;
+    font-size: 15vw;
+  }
+  
+  #h1under{
+    font-size: 18vw;
+  }
+
+  #handbogh1{
+    font-size: 17vw;
+  }
+
+  #handbogh1-1{
+    font-size:15vw;
+    margin-left: 8vw;
+    margin-top: 10vw;
+  }
+
+  #handbogh1-2{
+    font-size: 14vw;
+  }
+
+  #handbogh1-3{
+    font-size: 14vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    text-align: center;
+  }
+
+  #handbogh1-4{
+    font-size: 10vw;
+    line-height: 5vw;
+    margin-left: 15vw;
+    margin-bottom: 5vw;
+    text-align: right;
+  }
+
+  #handbogh1-5{
+    font-size: 14vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    text-align: center;
+  }
+  
+  #handbogh2{
+    font-size: 12vw;
+    margin-left: 15vw;
+    margin-top: -10vw;
+  }
+
+  #handbogh2-1{
+    font-size: 15vw;
+    margin-top: 5vw;
+    margin-left: -3vw;
+  }
+
+  #handbogh2-2{
+    font-size: 9vw;
+    margin-top: -8vw;
+    margin-left: 14vw;
+    margin-bottom: -8vw;
+  }
+
+  #handbogh2-3{
+    font-size: 9vw;
+    margin-left: 12vw;
+  }
+
+  #handbogh2-4{
+    font-size: 12vw;
+  }
+
+  #handbogh2-5{
+    font-size: 10vw;
+  }
+
+  #billedestr1{
+    width: 82%;
+    margin-left: -10vw;
+    margin-bottom: 10vw;
+  }
+
+  #billedestr2{
+    margin-left:-4vw;
+  }
+
+  #billedestr3{
+    margin-bottom: 10vw;
+    width: 100%;
+  }
+
+  #billedestr4{
+    width: 100%;
+    margin-left: 3vw;
+  }
+
+  #plejehånd{
+    margin-left: -8vw;
+  }
+
+  #negleformerbaggrund{
+    background-image: url(images/Mnegleformer.png);
+    height: 140vw;
+  }
+
+  .fit{
+    width: 90%;
+    margin:auto;
+}
+
+#aftagning{
+  width: 85%;
+  margin:auto;
+}
+
+#blaboks{
+  background-size: 97% 55%;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 2vw;
+}
+
+.kolonner{
+    width:100%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+}
+
+.reversekolonner{
+    width:100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin:auto;
+}
+
+.halvkolonne{
+    width:95%;
+    margin:auto;
+}
+
+.lillekolonne{
+  width:95%;
+  margin:auto;
+}
+
+.storkolonne{
+  width:95%;
+  margin:auto;
+}
+
+.storkolonnehøjre{
+  width:95%;
+  text-align: left;
+  margin:auto;
+  margin-bottom: 10vw;
+}
+
+.plejeguidekolonner{
+  width:90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:auto;
+}
+
+.plejeguidereversekolonner{
+  width:90%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  margin:auto;
+}
+
+.plejeguidevenstre{
+  width:95%;
+  text-align: right;
+  margin:auto;
+}
+
+.plejeguidehøjre{
+  width:95%;
+  text-align: left;
+  margin:auto;
+}
+
+.plejeguidegifhøjre{
+  width:100%;
+  margin-bottom: 15vw;
+}
+
+.plejeguidegifvenstre{
+  width:100%;
+  margin-bottom: 15vw;
+}
+
+.h1plejeguide{
+  font-size: 15vw;
+}
+
+.h2plejeguide{
+  font-size: 10vw;
+}
+
+#tipnr1{
+  background-position: center;
+  height: 90vw;
+}
+
+#tipnr2{
+  background-position: center;
+  height: 120vw;
+}
+
+#tipnr3{
+  background-position: center;
+  height: 70vw;
+}
+
+#tipnr4{
+  background-position: center;
+  height: 70vw;
+}
+
+#tipnr5{
+  background-position: center;
+  height: 100vw;
+}
+
+.neglefarve{
+  width: 30vw;
+}
+
+.neglefarve1{
+  width: 20vw;
+}
+
+#handbogmobilcenter{
+  text-align: center;
+  margin-top: 5vw;
+}
+}
+
+/*-------priser--------------------*/
+#priserdivtop{
+  width: 100%;
+  height: 110vh;
+  margin-top: 20vh;
+  background-image: url(images/PSaNeglecutoutFLIP.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#overskriftPriser{
+  width: 45%;
+  margin-left: 50%;
+}
+#overskriftPriser h1{
+  font-size: 7vw;
+  padding-top: 5vh;
+  margin-left: 20%;
+}
+#overskriftPriser h2{
+  margin-top: -7vh;
+}
+#overskriftPriser p{
+  margin-left: 10%;
+}
+
+.centreretH1{
+  text-align: center;
+  font-size: 6vw;
+  margin-top: 6vh;
+}
+.fempastribe{
+  width: 90%;
+  margin: auto;
+  margin-top: 12vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7vh;
+}
+.kort5{
+  width: 17%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  text-align: center;
+}
+.kort5 h2{
+  font-size: 3vw;
+  margin-bottom: -2vh;
+}
+.kort5 p{
+  margin-top: 1vh;
+}
+
+.lillep{
+  font-size: 1vw;
+  margin-bottom: 3vh;
+  
+}
+.kort5 img{
+  margin-bottom: 2vh;
+}
+
+
+.fempåstribetxt{
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+
+}
+.fempåstribetxt h1{
+  font-size: 7vw;
+}
+.fempåstribetxt h2{
+  font-size: 3vw;
+  margin-top: 5vh;
+}
+.priserimgStandard{
+  width: 47%;
+  height: 100%;
+  
+}
+.priserIMG{
+  width: 45%;
+  height: inherit;
+  object-fit: cover;
+}
+.nederste{
+  margin-left: 10%;
+  text-align: center;
+}
+#priserBTN{
+  width: 50%;
+  height: 4vh;
+  margin: auto;
+  margin-top: 5vh;
+  opacity: 80%;
+  font-size: 1.4vw;
+  font-weight: lighter;
+}
+/*------------booking.------------*/
+
+#bookingdiv{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-top: 200px;
+    margin-bottom: 150px;
+}
+
+.bookpic{
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    margin-left: 5%;
+    margin-top: 100px;
+}
+#bookh2{
+    text-align: right;
+}
+#bookingtext{
+    width: 50%;
+}
+form{
+   
+    display: flex;
+    flex-direction: column;
+}
+label{
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 1.5%;
+}
+input{
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 4%;
+  background-color: #fce4f1;
+  padding-left: 2%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  opacity: 70%;
+  border: solid black 1px;
+}
+
+#bookbtn{
+  width: 25%;
+  margin-top: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 1.4vw;
+  background-color: #fce4f1;
+  border: solid black 1px;
+  text-align: center;
+  opacity: 80%;
+}
+
+/*--------kvittering-----------*/
+
+#kvitteringsdiv{
+  width: 50%;
+  height: fit-content;
+  margin: auto;
+  margin-top: 10%;
+}
+#kvitteringsdiv h2{
+  margin-left: 20%;
+
+}
+
+#kvitteringsdiv p{
+  margin-left: 15%;
+  line-height: 200%;
+}
+#livasignatur{
+  font-size: 3vw;
+  text-align: center;
+  margin-top: 0vh;
+}
+#kvitteringbtndiv{
+  margin-top: 2vh;
+  width: 40%;
+  margin-left: 30%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vh;
+  margin-bottom: 30vh;
+}
+@media only screen and (max-width: 992px){
+    .mobil{
+        display: block;
+    }
+    .laptop{
+        display: none;
+    }
+    h1{
+      font-size: 15vw;
+    }
+    h2{
+      margin-top: -5vh;
+    }
+    h3{
+      font-size: 6.5vw;
+    }
+
+    p {
+      font-size:3.4vw;
+    }
+
+    li {
+      font-size:3.4vw;
+    }
+    /*------header----------------*/
+
+    header{
+        background-color: transparent;
+    }
+    nav{
+        display: flex;
+        width: 100%;
+    }
+    #logo{
+        margin: 30px;
+        width: 15%;
+        overflow: visible;
+    }
+    .button{
+      width: fit-content;
+      padding: 2% 7%;
+      height: 3.5vh;
+      font-size: 3vw;
+    }
+  #burger-menu {
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    margin: 90%;
+    margin-top: 30px;
+    overflow: visible;
+    position: fixed;
+    z-index: 2;
+  }
+  /*OBS - tror det her er halvgammel kode - der er vidst nye standarder, 
+  så det skal hedde ::after og ::before med to koloner*/
+  #burger-menu span,
+  #burger-menu span::before,
+  #burger-menu span::after {
+    background: rgb(0, 0, 0);
+    display: block;
+    height: 3px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+  }
+  #burger-menu span:before,
+  #burger-menu span:after {
+    content: "";
+  }
+  #burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 27px;
+  }
+  #burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 27px;
+  }
+  #burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 27px;
+  }
+  #burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+  }
+  #burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+  }
+  #burger-menu.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+  }
+  
+  #menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  #menu.overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 100px;
+    margin-top: 25px;
+    background-color: #fce4f1;
+    opacity: 90%;
+  }
+  #tidligereUL {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    gap: 0%;
+    height: 70vh;
+    margin-top: 20px;
+    margin-top: 20px;
+  }
+  #menu a{
+    font-size: 3vw;
+    margin: 10px 0;
+    display: block;
+    margin-bottom: 30px;
+    z-index: 5;
+  }
+  .dropdown-list{
+    background-color: transparent;
+    padding-top: 0px;
+    position: relative;
+    z-index: 5;
+  }
+  /*---------index------------*/
+  #mobillogo{
+    width: 40%;
+    margin-left: 30%;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  #forsidediv{
+    padding-top: 50px;
+    background-image: url(images/Mforside.jpg);
+  }
+  #forsideh1-1{
+    font-size: 10vw;
+    margin-top: 50px;
+  }
+  #forsideh2-1{
+    font-size: 8vw;
+    margin-top: 2vh;
+  }
+  #forsidebtndiv{
+    flex-direction: column;
+    margin-top: 20vh;
+    width: 50%;
+    margin-left: 25%;
+    justify-self: unset;
+  }
+  .forsidebtn{
+    margin-bottom: 3vh;
+    font-size: 4vw;
+    padding-top: 2vh;
+    height: 4vh;
+    width: 100%;
+  }
+
+  #flipflopogtext{
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10vh;
+    align-items: center;
+  }
+
+  #flipflopramme{
+    width: 100%;
+    margin-bottom: 75%;
+   
+  }
+  #fliptext{
+    width: 90%;
+  }
+  .flipbtn{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding-top: 2vh;
+    font-size: 4vw;
+  }
+  #studierabat{
+    margin-top: 7vh;
+    background-size: 160%;
+    background-position-x: 10%;
+  }
+  #forsideh1-2{
+    font-size: 17vw;
+    margin-left: 7%;
+  }
+  #forsideh2-2{
+    font-size: 15vw;
+    margin-left: 5%;
+    padding-bottom: 35vh;
+  }
+  .firepastribe{
+    flex-direction: column;
+    width: 70%;
+  }
+  .testimonial{
+    width: 100%;
+  }
+  .cirkeltesti{
+
+    margin-bottom: 4vh;
+  }
+  .centreretP{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10vh;
+    margin-top: 3vh;
+  }
+
+  #forsideh1-3{
+    font-size: 17vw;
+    text-align: center;
+  }
+  #forsideh2-3{
+    margin-top: 0;
+    margin-bottom: 2vh;
+    font-size: 13vw;
+  }
+  .tiktokvideo{
+    width: 100%;
+    height: 65vh;
+    margin-bottom: 7vh;
+  }
+  #tiktok1,
+  #tiktok2,
+  #tiktok3,
+  #tiktok4{
+    display: none;
+  }
+  /*skal evt slettes herfra karousel*/
+  .videogalleri{
+    width: 100%;
+    height: 80vh;
+    margin: auto;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between
+  }
+  #venstrepil{
+    margin-top: 50%;
+    margin-left: 1%;
+    width: 10%;
+    height: 20px;
+}
+#højrepil{
+  margin-top: 50%;
+  margin-right: 1%;
+  width: 10%;
+  height: 20px;
+}
+.mobiltiktokvideo{
+  width: 80%;
+  height: 90%;
+  object-fit: cover;
+  margin-bottom: 5%;
+}
+
+  #blivinspireret{
+    width: 80%;
+    flex-direction: column-reverse;
+  }
+  .inspopic{
+    width: 100%;
+  }
+  #instasection{
+    width: 100%;
+  }
+  #instasection h1{
+    font-size: 12vw;
+  }
+  #forskudth1{
+    margin-left: 15%;
+  }
+  #instasection h2{
+    margin-top: 0;
+    margin: auto;
+    font-size: 10vw;
+  }
+  #inspobtn{
+    width: 50%;
+    font-size: 3vw;
+    margin-bottom: 5vh;
+    text-align: center;
+    margin-top: 3vh;
+    padding-top: 2vh;
+  }
+
+  #trepics{
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    gap: 60vh;
+    margin-bottom: 50%;
+  }
+  .posrelcontainer{
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 40%;
+  }
+  .laesmerepic{
+    height: 70vh;
+  }
+  .posabsbtn{
+    font-size: 4vw;
+    margin-top: 60vh;
+    width: 60%;
+  }
+ #vertikalmobil{
+  font-size: 15vw;
+ }
+ /*---------priser---------------*/
+ #priserdivtop{
+    margin-top: 0vh;
+    background-size: cover;
+    background-position: center; 
+ }
+
+  #overskriftPriser{
+    width: 80%;
+    margin: auto;
+    padding-top: 10vh;
+    
+  }
+  #overskriftPriser h1{
+    font-size: 20vw;
+    margin-left: 0%;
+  }
+  #overskriftPriser h2{
+    font-size: 15vw;
+  }
+  #overskriftPriser p{
+    font-size: 4vw;
+    line-height: 200%;
+    margin-left: 20%;
+  }
+  #centreretH1{
+    font-size: 10vw;
+  }
+  .fempastribe{
+    flex-direction: column;
+    width: 100%;
+    
+  }
+  .kort5{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 14vh;
+  }
+  .kort5 h2{
+    font-size: 10vw;
+  }
+  .kort5 p{
+    font-size: 3.5vw;
+    width: 70%;
+    margin: auto;
+  }
+  .kort5 img{
+    margin-top: 3vh;
+  }
+  .priserimgStandard{
+    width: 100%;
+  }
+  .fempåstribetxt{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5vh;
+  }
+  .fempåstribetxt h1{
+    font-size: 17vw;
+  }
+  .fempåstribetxt h2{
+    font-size: 9vw;
+  }
+  .fempåstribetxt p{
+    font-size: 3vw;
+    padding-right: 20%;
+  }
+  .hjælpedivmobil{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    margin-top: 7vh;
+  }
+  .priserIMG{
+    width: 80%;
+  }
+  .columnrevers{
+    flex-direction: column-reverse;
+    margin-bottom: 12vh;
+  }
+  .fempåstribetxt p{
+    width: 60%;
+    margin-left: 20%;
+  }
+  #priserBTN{
+    font-size: 4vw;
+    
+  }
+  /*----------booking-------*/
+
+  #bookingdiv{
+    flex-direction: column;
+    width: 80%;
+    margin-top: 100px;
+  }
+  #bookingtext{
+    width: 100%;
+    z-index: 0;
+  }
+  #bookh1{
+    text-align: center;
+  }
+  #bookh2{
+    margin-right: 5vw;
+    font-size: 10vw;
+  }
+  #bookbtn{
+    font-size: 4vw;
+    width: 40%;
+  }
+  #bookpic{
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+ 
+   /*----------om neglementet-------*/
+   #omliva{
+   width:100%;
+   display:flex;
+   margin-top:4vh;
+   margin-left:0%;
+  }
+  
+  #omneglementet{
+    padding-left:0%;
+    background-image: none;
+    width:100%;
+  }
+
+   #omneglementet h2{
+   margin-left:50%;
+   margin-top: -7vh;
+   font-size:10vw;
+  }
+
+  #omneglementet h1{
+  font-size:12vw;
+  margin-top:10vh;
+  text-align: center;
+  }
+
+  #omneglementet p{
+    padding:5%;
+  }
+
+  .livamobil{
+   width:100%;
+   height:80vh;
+   object-fit: cover;
+  }
+
+/*--shellac--*/
+
+#shellac{
+  width: 95%;
+  margin-right: 5%;
+  display: flex;
+  background-image:none;
+}
+
+#omshellac p{
+  padding-left:13%;
+  width: 75%;
+}
+
+#omshellac{
+  width: 90%;
+  margin-left:5%;
+}
+
+#omshellac h2{
+  margin-top: 5vh;
+  margin-bottom:5%;
+  padding-left:25%;
+  font-size:9vw;
+}
+
+/*--brisa gel--*/
+
+#brisagel{
+  width: 90%;
+  margin-right: 5%;
+  display: flex;
+  background-image:none;
+}
+
+#ombrisagel{
+  width: 100%;
+  margin-left:0%;
+  background-image:none;
+}
+
+#ombrisagel p{
+  padding-left:13%;
+  width: 70%;
+}
+
+#ombrisagel h2{
+  margin-top: 5vh;
+  margin-bottom:3%;
+  padding-left: 4%;
+  font-size:9vw;
+  text-align: left;
+}
+
+#livamobil2{
+  width:100%;
+  height:84vh;
+  background-image: url(images/BrisaGel.png);
+  background-size: 140%;
+}
+
+/*--betingelser--*/
+
+#betingelser{
+  margin-bottom: 8%;  
+  padding-top: 3vh;
+}
+
+#ombetingelser{
+  width: 83%;
+}
+
+#ombetingelser h1{
+  font-size: 7.5vw;
+}
+
+#ombetingelser ul{
+  padding-left: 4.7%;
+}
+
+.underpunkter{
+  margin-left: 6%;
+}
+
+/*----------kvittering -----*/
+#kvitteringsdiv{
+  width: 60%;
+  padding-top: 4vh;
+}
+
+#kvitteringsdiv h1{
+  font-size: 20vw;
+}
+#kvitteringsdiv h2{
+  margin-left: 30%;
+  font-size: 5vw;
+}
+
+#kvitteringsdiv p{
+  margin-left: 12%;
+  margin-top: 2vh;
+}
+#kvitteringbtndiv{
+  flex-direction: column;
+  margin-top: 4vh;
+  gap: 4vh;
+}
+.kvitteringsbtn{
+  width: 100%;
+  text-align: center;
+  padding-top: 1.5vh;
+  font-size: 4vw;
+}
+}
+/*-----------footer---------*/
+footer{
+  background-color: #FCEFF5;
+  
+}
+
+.footerlayout{
+  display: flex;
+  justify-content: center;
+  width:85%;
+  margin:auto;
+  padding-top: 50px;
+  padding-bottom:80px;
+}
+
+.footerbox{
+  width: 38%;
+  padding: 20px;
+}
+
+#grapebaggrund{
+  background-image: url(images/grapetilfooter.png);
+  background-size: 22vw;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.lillefooterbox{
+  width:24%;
+  padding: 20px;
+}
+
+footer p{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.3vw; 
+  color: #000;
+  line-height: 165%;
+  opacity: 150%;
+}
+
+footer a{
+  text-decoration: none;
+}
+
+#footerhand{
+  width: 24vw;
+  margin-top: 2.5vw;
+  margin-bottom: -12vw;
+}
+
+.someboks{
+  width: 80%;
+  text-align: left;
+  margin-top: 2vw;
+}
+.someikon{
+  width: 20%;
+  margin-right: 2vw;
+}
+
+/*  LAPTOP LAYOUT*/
+@media only screen and (min-width: 992px){
+
+  .mobilfooterbox{
+      display:none;
+  }
+}
+
+/* Mobil layout*/
+@media only screen and (max-width: 992px){
+  .footerlayout{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerbox{
+    display:none;
+}
+
+.lillefooterbox{
+    display:none;
+}
+
+.mobilfooterbox{
+    width: 85%;
+}
+
+#grapebaggrund{
+  background-size: 30vw;
+  background-position: right bottom;
+}
+
+footer p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 3.7vw; 
+    color: #000;
+    line-height: 165%;
+    margin-bottom:40px;
+}
+
+footer a{
+    text-decoration: none;
+}
+}
+
+
+
+/*---------galleri-------*/
+
+#mainGalleri{
+  padding-bottom: 100px;
+  
+}
+
+#mainGalleri h1 h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+#galleriOverskrift
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+}
+
+
+.galleri {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#slutGalleri {
+  margin-bottom: 7%;
+}
+
+.galImg {
+  width: 30%;
+  height: 30%;
+  margin-top: 4%;
+}
+
+.fullsize {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  cursor: zoom-out;
+  width: 40vw;
+  height: 40vw;
+}
+
+.galleriMobil {
+  display: none;
+}
+
+@media only screen and (max-width: 992px){
+
+.galleri {
+  display: none;
+}
+
+.galleriMobil {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.galleriMobil img {
+  width: 80%;
+  height: 80%;
+
+  margin-top: 5%;
+}
+
+
+}
+

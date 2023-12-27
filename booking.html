@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--fonte-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/Negel-mentetglitter.png">
+    <title>Neglementet | Booking</title>
+    <script src="https://kit.fontawesome.com/6978fc69bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div id="rabatdut">10% STUDIERABAT PÅ ALLE BEHANDLINGER</div>
+        <nav id="navbar">
+            <div id="burger-menu">
+                <span></span>
+            </div>
+              
+            <div id="menu">
+    
+                <div id="tidligereUL">
+                    <div  class="menu-dropdown mobil" onclick = "openDropdown()"> 
+                        <a href="#">Om Neglementet</a>
+    
+                        <div class="dropdown-list" id="omlist">
+                            <a href="neglementet.html">Om Neglementet</a>
+                            <a href="neglementet.html#shellaclink">Om Shellac®</a>
+                            <a href="neglementet.html#brisagel">Om Gele</a>
+                            <a href="neglementet.html#betingelser">Betingelser</a>
+                        </div>
+                    </div>
+    
+                    <div class="dropdown laptop">
+                        <a href="neglementet.html">Om Neglementet</a>
+                            <div class="dropdown-content">
+                                <span>
+                                    <a href="neglementet.html">Om Neglementet</a>
+                                </span>
+                                <span>
+                                    <a href="neglementet.html#shellac">Om Shellac®</a>
+                                </span>
+                                <span>
+                                    <a href="neglementet.html#brisagel">Om Gele</a>
+                                </span>
+                                <span>
+                                    <a href="neglementet.html#betingelser">Betingelser</a>
+                                </span>
+                            </div>
+                    </div>
+                   
+                    <div  class="menu-dropdown mobil" onclick = "openHaandDropdown()"> 
+                        <a href="#">Håndbogen</a>
+    
+                        <div class="dropdown-list" id="haandlist">
+                            <a href="håndbog.html">Inden behandling</a>
+                            <a href="håndbog.html#plejebillede">Efter behandling</a>
+                        </div>
+                    </div>
+    
+                    <div class="dropdown laptop">
+                        <a href="håndbog.html">Håndbog</a>
+                            <div class="dropdown-content hand">
+                                <span>
+                                    <a href="håndbog.html">Inden behandling</a>
+                                </span>
+                                <span>
+                                    <a href="håndbog.html#plejebillede">Efter behandling</a>
+                                </span>
+                            </div>
+                    </div>
+                    <a href="index.html"><img id="logo" src="images/NEGLEMENTETLOGO.png" alt="Logo Neglementet"></a>
+                    <a href="priser.html">Priser</a>
+                    <a href="galleri.html">Galleri</a>
+                    <a id="booking" href="booking.html">Booking</a>
+                </div>
+            </div>
+    
+        </nav>
+    </header>
+<main>
+    <div id="bookingdiv">
+        <div id="bookingtext">
+            <h1 id="bookh1">BOOK</h1>
+            <h2 id="bookh2">din tid her</h2>
+            <form>
+                <label for="navn">Navn</label>
+                <input id="navn" type="text" placeholder="Leah Jensen">
+                
+                <label for="email">Email</label>
+                <input id="email" type="text" placeholder="leahjensen@gmail.com">
+                <!--Skriv venligst en valid email - ellers spamer I min mand med fejlmeldinger fra API'et
+                Also - nu kan vi jo formentligt holde øje med hvornår I vurderer vores opgave ;) Hej med jer-->
+                
+                <label for="behandling">Behandling</label>
+                <input id="behandling" list="behandlingstype" placeholder="Vælg behandling">
+                    <datalist id="behandlingstype">
+                        <option value="Shellac®"></option>
+                        <option value="Shellac® - med nail art"></option>
+                        <option value="Forstærkning"></option>
+                        <option value="Forstærkning - enkelt farve"></option>
+                        <option value="Forstærkning - med nail art"></option>
+                        <option value="Forlængelse - enkelt farve"></option>
+                        <option value="Forlængelse - med nail art"></option>
+                        <option value="Opfyldning - enkelt farve"></option>
+                        <option value="Opfyldning - med nail art"></option>
+                        <option value="Manicure og negleolie"></option>
+                    </datalist>
+        
+                <label for="aftagning">Aftagning</label>
+                <input id="aftagning" list="ja-nej" placeholder="Vælg aftagning">
+                    <datalist id="ja-nej">
+                        <option value="med aftagning"></option>
+                        <option value="uden aftagning"></option>
+                    </datalist>
+    
+                <label for="tid">Tid</label>
+                <input  id="tid" class="rullebox" list="tider" placeholder="Ledige tider">
+                    <datalist id="tider">
+                        <option value="Mandag kl 16 og frem"></option>
+                        <option value="Tirsdag kl 20 og frem"></option>
+                        <option value="Onsdag kl 17 og frem"></option>
+                        <option value="Torsdag kl 13 og frem"></option>
+                        <option value="Lørdag kl 10 og frem"></option>
+                        <option value="Søndag kl 12 og frem"></option>
+                    </datalist>
+                    <!--Tiderne er skrevet således, så vi ikke skal tilføje ekstra JS, der tager hensyn til
+                    at alle behandlinger tager forskellig tid. Det kan vi kigge på til mundtlig...måske... don't get your hopes up Andreas-->
+                <div id="bookbtn">Bestil tid</div>
+            </form>
+
+ 
+        </div>
+        <img class="laptop bookpic" src="images/Lbalonnegl.jpg" alt="guld negle">
+        <img class="mobil bookpic" src="images/Mbalonnegl.jpg" alt="guld negle">
+    
+    </div>
+</main>
+<footer id="grapebaggrund">
+    <div class="footerlayout">
+        <div class="footerbox">
+            <p><b>KONTAKT</b><br>
+            <b>E-mail: </b><br>
+                kontakt@neglementet.dk<br>
+                
+                <b>Tlf:</b><br>
+                31 36 44 80<br>
+                
+                <b>Adresse:</b><br>
+                Øgadekvarteret<br>
+                8000, Århus C<br>
+                
+                (præcis adresse oplyses ved booking)</p>
+        </div>
+        <div class="footerbox">
+            
+        </div>
+        <div class="lillefooterbox">
+            <p>
+                <b>Følg Neglementet</b></p>
+                <div class="someboks">
+                    <a href="https://www.instagram.com/neglementet/">
+                        <img src="images/instaikon.png" class="someikon" alt="instagram">
+                    </a>
+                    <a href="https://www.tiktok.com/@neglementet">
+                        <img src="images/tiktokikon.png" class="someikon" alt="tiktok">
+                    </a>
+                </div>
+                <p><br>
+                Del dine billeder med<br>
+                #neglementet eller tag mig<br>
+                <br>
+            </p>
+            <p>
+                Presse &nbsp;&nbsp;&nbsp;Persondatapolitik
+            </p>
+        </div>
+        
+        <!--MOBIL FOOTER-->
+        
+        <div class="mobilfooterbox">
+            <p><b>KONTAKT</b><br>
+                <b>E-mail: </b><br>
+                    kontakt@neglementet.dk<br>
+                    
+                    <b>Tlf:</b><br>
+                    31 36 44 80<br>
+                    
+                    <b>Adresse:</b><br>
+                    Øgadekvarteret<br>
+                    8000, Århus C<br>
+                    
+                    (præcis adresse oplyses ved booking)</p>
+        </div>
+        <div class="mobilfooterbox">
+            <p>
+                <b>Følg os</b>
+            </p>
+            <div class="someboks">
+                <a href="https://www.instagram.com/neglementet/">
+                    <img src="images/instaikon.png" class="someikon" alt="instagram">
+                </a>
+                <a href="https://www.tiktok.com/@neglementet">
+                    <img src="images/tiktokikon.png" class="someikon" alt="tiktok">
+                </a>
+            </div> 
+            <p><br>
+                Del dine billeder med<br>
+                #neglementet eller tag os<br>
+                <br>
+            </p>
+            <p>
+                Presse &nbsp;&nbsp;&nbsp;Persondatapolitik
+            </p>
+        </div>
+        <div class="mobilfooterbox">
+           
+        </div>
+    </div>
+</footer>
+</body>
