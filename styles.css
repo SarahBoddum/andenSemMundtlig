@@ -508,7 +508,7 @@ header{
   justify-content: space-between;
 }
 .inspopic{
-  width: 47%;
+  width: 80%;
   height: auto;
 }
 #instasection{
@@ -549,25 +549,36 @@ header{
   height: 100%;
 }
 .posrelcontainer{
-  position: relative;
-  width: 30%;
-  height: auto;
+    width: 30%;
+   
+    padding-top: 60vh;
+    padding-bottom: 10vh;
+    align-items: center;
 }
-.laesmerepic{
-  width: 100%;
-  height: 80vh;
-  object-fit: cover;
-  position: absolute;
+#livalaesmere{
+    background-image: url(images/Liva.jpg);
+    background-size: cover;
+}
+
+#annalaesmere{
+    background-image: url(images/anna2.png);
+    background-size: cover;
+}
+
+#sarahlaesmere{
+    background-image: url(images/PSaNeglecutout.png);
+    background-size: cover;
+    background-position-x: -15vw;
 }
 .posabsbtn{
   text-align: center;
-  height: 4vh;
-  width: 50%;
-  position: absolute;
+  height: 5vh;
+  width: 100%;
   z-index: 1;
-  margin-left: 15%;
-  margin-top: 65vh;
+  margin-left: 20%;
   padding-top: 1vh;
+  padding-bottom: 1vh;
+  font-size: 1.5vw;
 }
 
 
@@ -1247,6 +1258,7 @@ display: none;
 
 .h2plejeguide{
   font-size: 10vw;
+  margin-top: -5vh;
 }
 
 #tipnr1{
@@ -1261,6 +1273,7 @@ display: none;
 
 #tipnr3{
   background-position: center;
+  background-size: 60%;
   height: 70vw;
 }
 
@@ -1444,7 +1457,12 @@ input{
   text-align: center;
   opacity: 80%;
 }
-
+.fejlbesked{
+    font-family: 'Lato', sans-serif;
+    color: rgb(98, 98, 98);
+    margin-top: -2vh;
+    font-size: 1vw;
+}
 /*--------kvittering-----------*/
 
 #kvitteringsdiv{
@@ -1511,7 +1529,7 @@ input{
     }
     #logo{
         margin: 30px;
-        width: 15%;
+        width: 20%;
         overflow: visible;
     }
     .button{
@@ -1610,7 +1628,7 @@ input{
     margin-top: 20px;
   }
   #menu a{
-    font-size: 3vw;
+    font-size: 4.5vw;
     margin: 10px 0;
     display: block;
     margin-bottom: 30px;
@@ -1632,10 +1650,11 @@ input{
   #forsidediv{
     padding-top: 50px;
     background-image: url(images/Mforside.jpg);
+    margin-bottom: 0vh;
   }
   #forsideh1-1{
     font-size: 10vw;
-    margin-top: 50px;
+    padding-top: 10vh;
   }
   #forsideh2-1{
     font-size: 8vw;
@@ -1643,14 +1662,14 @@ input{
   }
   #forsidebtndiv{
     flex-direction: column;
-    margin-top: 20vh;
+    margin-top: 15vh;
     width: 50%;
     margin-left: 25%;
     justify-self: unset;
   }
   .forsidebtn{
     margin-bottom: 3vh;
-    font-size: 4vw;
+    font-size: 4.5vw;
     padding-top: 2vh;
     height: 4vh;
     width: 100%;
@@ -1661,23 +1680,29 @@ input{
     width: 80%;
     margin: auto;
     margin-bottom: 10vh;
-    align-items: center;
+    margin-top: -10vh;
+    justify-content: unset;
   }
 
   #flipflopramme{
     width: 100%;
-    margin-bottom: 75%;
-   
+    height: 0px;
+    margin-bottom: 80%;
+    top: 0;
   }
   #fliptext{
     width: 90%;
+    padding-top: 30vh;
+  }
+  #fliptext p{
+    font-size: 4.5vw;
   }
   .flipbtn{
     margin: auto;
     width: 50%;
     text-align: center;
     padding-top: 2vh;
-    font-size: 4vw;
+    font-size: 4.5vw;
   }
   #studierabat{
     margin-top: 7vh;
@@ -1709,6 +1734,7 @@ input{
     margin: auto;
     margin-bottom: 10vh;
     margin-top: 3vh;
+    font-size: 4.5vw;
   }
 
   #forsideh1-3{
@@ -1782,7 +1808,7 @@ input{
   }
   #inspobtn{
     width: 50%;
-    font-size: 3vw;
+    font-size: 4.5vw;
     margin-bottom: 5vh;
     text-align: center;
     margin-top: 3vh;
@@ -1793,30 +1819,31 @@ input{
     flex-direction: column;
     width: 100%;
     justify-content: space-between;
-    gap: 60vh;
-    margin-bottom: 50%;
+    gap: 6vh;
   }
   .posrelcontainer{
     width: 90%;
+    padding-top: 40vh;
+    padding-bottom: 10vh;
     margin-left: 5%;
-    margin-bottom: 40%;
-  }
-  .laesmerepic{
-    height: 70vh;
   }
   .posabsbtn{
     font-size: 4vw;
     margin-top: 60vh;
     width: 60%;
+
   }
  #vertikalmobil{
   font-size: 15vw;
+ }
+ #sarahlaesmere{
+    background-position-x: -45vw;
  }
  /*---------priser---------------*/
  #priserdivtop{
     margin-top: 0vh;
     background-size: cover;
-    background-position: center; 
+    background-position-x: -180vw;
  }
 
   #overskriftPriser{
@@ -1922,7 +1949,7 @@ input{
     font-size: 4vw;
     width: 40%;
   }
-  #bookpic{
+  .bookpic{
     width: 100%;
     height: auto;
     margin-left: 0;
@@ -1996,7 +2023,7 @@ input{
   width: 90%;
   margin-right: 5%;
   display: flex;
-  background-image:none;
+  background-image: none;
 }
 
 #ombrisagel{
@@ -2020,9 +2047,10 @@ input{
 
 #livamobil2{
   width:100%;
-  height:84vh;
+  height:60vh;
   background-image: url(images/BrisaGel.png);
   background-size: 140%;
+  background-repeat: no-repeat;
 }
 
 /*--betingelser--*/
@@ -2237,11 +2265,13 @@ footer a{
   cursor: zoom-out;
   width: 40vw;
   height: 40vw;
+  margin-top: 320vh;
 }
 
 .galleriMobil {
   display: none;
 }
+
 
 @media only screen and (max-width: 992px){
 
@@ -2261,6 +2291,9 @@ footer a{
   height: 80%;
 
   margin-top: 5%;
+}
+#marginbottom{
+    margin-bottom: 6vh;
 }
 
 

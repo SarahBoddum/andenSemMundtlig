@@ -44,32 +44,99 @@ haandList.addEventListener('click', function() {
       }
     }
 
-if(bookBtn !== null){
-  bookBtn.addEventListener('click', gemBooking);
-}
 
-  console.log('event lister tilføjet');
-function gemBooking() {
-    let navn = document.getElementById("navn").value;
-    let email = document.getElementById("email").value;
-    let behandling = document.getElementById("behandling").value;
-    let aftagning = document.getElementById("aftagning").value;
-    let tid = document.getElementById("tid").value;
-    let body = 'Hej <b>' + navn + '</b><p>du har bestilt tid den ' + tid + '</p> til følgende behandling ' + behandling + aftagning +'. Jeg glædemig til at se dig. ';
-    console.log('kaugdk');
-    var fetchUrl = 'https://jimppbookingapi.azurewebsites.net/api/NailBooking/SendBookingNotification?email=' + email + '&navn=' + navn + '&tid=' + tid + '&body=' + body;
-    fetch(fetchUrl, {
-    method: 'POST',
-    headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-    },
-})
-   .then(response => response.json())
-   .then(response => console.log(JSON.stringify(response)) )
-   
-    window.location.href = 'kvittering.html';
-}
+    document.addEventListener('DOMContentLoaded', function () {
+        var bookBtn = document.getElementById('bookbtn');
+        var form = document.getElementById('form');
+        var formSubmitted = false;
+    
+        if (bookBtn !== null) {
+            bookBtn.addEventListener('click', function (event) {
+                formSubmitted = true;
+                gemBooking(event);
+            });
+        }
+    
+        console.log('event lister tilføjet');
+    
+        function gemBooking(event) {
+            validateInput(document.getElementById('navn'), null, 'navn-fejl', 'Indtast venligst for- og efternavn');
+            validateInput(document.getElementById('email'), null, 'email-fejl', 'Indtast venligst en gyldig e-mailadresse.');
+            validateInput(document.getElementById('behandling'), ['Shellac®', 'Shellac® - med nail art', 'Forstærkning', 'Forstærkning - enkelt farve', 'Forstærkning - med nail art', 'Forlængelse - enkelt farve', 'Forlængelse - med nail art', 'Opfyldning - enkelt farve', 'Opfyldning - med nail art', 'Manicure og negleolie'], 'behandling-fejl', 'Vælg venligst en af de mulige behandlingstyper');
+            validateInput(document.getElementById('aftagning'), ['med aftagning', 'uden aftagning'], 'aftagning-fejl', 'Vælg venligst en af de mulige behandlingstyper');
+            validateInput(document.getElementById('tid'), ['Mandag kl 16 og frem', 'Tirsdag kl 20 og frem', 'Onsdag kl 17 og frem', 'Torsdag kl 13 og frem', 'Lørdag kl 10 og frem', 'Søndag kl 12 og frem'], 'tid-fejl', 'Vælg venligst en af de mulige tider');
+    
+            if (form.checkValidity()) {
+                // Håndter booking og videreførelse, hvis formularen er gyldig
+                handleValidForm();
+            } else {
+                // Vis fejlbeskeder, hvis formularen ikke er gyldig
+                showValidationErrors();
+            }
+    
+            // Nulstil formSubmitted efter validering
+            formSubmitted = false;
+        }
+    
+        function handleValidForm() {
+            var navn = document.getElementById('navn').value;
+            var email = document.getElementById('email').value;
+            var behandling = document.getElementById('behandling').value;
+            var aftagning = document.getElementById('aftagning').value;
+            var tid = document.getElementById('tid').value;
+    
+            var body = 'Hej <b>' + navn + '</b><p>du har bestilt tid den ' + tid + '</p> til følgende behandling ' + behandling + aftagning + '. Jeg glæder mig til at se dig.';
+    
+            var fetchUrl = 'https://jimppbookingapi.azurewebsites.net/api/NailBooking/SendBookingNotification?email=' + email + '&navn=' + navn + '&tid=' + tid + '&body=' + body;
+    
+            fetch(fetchUrl, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+            })
+            .then(response => response.json())
+            .then(response => console.log(JSON.stringify(response)));
+    
+            window.location.href = 'kvittering.html';
+        }
+    
+        function showValidationErrors() {
+            // Vis fejlbeskeder, hvis formularen ikke er gyldig og brugeren har forsøgt at indsende den
+            if (formSubmitted) {
+                var fejlbeskeder = form.querySelectorAll('.fejlbesked');
+                fejlbeskeder.forEach(function (element) {
+                    if (element.innerHTML !== '') {
+                        element.style.display = 'block';
+                    }
+                });
+            }
+        }
+    
+        function validateInput(inputField, validOptions, errorMessageId, errorMessage) {
+            var errorMessageElement = document.getElementById(errorMessageId);
+        
+            // Fjern eksisterende fejlbesked og nulstil klassen 'invalid'
+            errorMessageElement.innerHTML = '';
+            errorMessageElement.style.display = 'none';
+            inputField.classList.remove('invalid');
+        
+            if (inputField.id === 'email') {
+                // Tjek for gyldig e-mail-format
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(inputField.value)) {
+                    errorMessageElement.innerHTML = 'Fejl: ' + errorMessage;
+                    errorMessageElement.style.display = 'block';
+                    inputField.classList.add('invalid');
+                }
+            } else if (validOptions && !validOptions.includes(inputField.value)) {
+                errorMessageElement.innerHTML = 'Fejl: ' + errorMessage;
+                errorMessageElement.style.display = 'block';
+                inputField.classList.add('invalid');
+            }
+        }
+    });
 
 //play video on mouse over
 /*video1*/
@@ -198,11 +265,12 @@ let hoejrepil = document.getElementById("højrepil");
 
 // Array
 
-let carousel = [mobilTikTok1, mobilTikTok2, mobilTikTok3];
+let carousel = [mobilTikTok1, mobilTikTok2, mobilTikTok3, mobilTikTok4];
 
 mobilTikTok1.style.display = "block";
 mobilTikTok2.style.display = "none";
 mobilTikTok3.style.display = "none";
+mobilTikTok4.style.display = "none"; 
 
 
 
@@ -226,11 +294,12 @@ function forrigeFilm(){
 }
 
 // Funktion til at skifte til næste billede
-function visnaesteFilm() {
+/*function visnaesteFilm() {
   if (mobilTikTok1.style.order === '1') {
     mobilTikTok1.style.order = '2';
       mobilTikTok2.style.order = '3';
       mobilTikTok3.style.order = '1';
+      mobilTikTok4.style.order
   } else if (mobilTikTok2.style.order === '1') {
     mobilTikTok1.style.order = '1';
     mobilTikTok2.style.order = '2';
@@ -257,4 +326,99 @@ function visforrigeBillede() {
       mobilTikTok2.style.order = '2';
       mobilTikTok3.style.order = '3';
   }
-}
+}*/
+
+
+//middelmåde fejlbesked til booking - tjekker forkert på mail og navn, men det andet virker
+/*
+document.addEventListener('DOMContentLoaded', function () {
+    var bookBtn = document.getElementById('bookbtn');
+    var form = document.getElementById('form');
+    var formSubmitted = false;
+
+    if (bookBtn !== null) {
+        bookBtn.addEventListener('click', function (event) {
+            formSubmitted = true;
+            gemBooking(event);
+        });
+    }
+
+    console.log('event lister tilføjet');
+
+    function gemBooking(event) {
+        validateInput(document.getElementById('navn'), null, 'navn-fejl', 'Indtast venligst for- og efternavn');
+        validateInput(document.getElementById('email'), null, 'email-fejl', 'Indtast venligst en gyldig e-mailadresse.');
+        validateInput(document.getElementById('behandling'), ['Shellac®', 'Shellac® - med nail art', 'Forstærkning', 'Forstærkning - enkelt farve', 'Forstærkning - med nail art', 'Forlængelse - enkelt farve', 'Forlængelse - med nail art', 'Opfyldning - enkelt farve', 'Opfyldning - med nail art', 'Manicure og negleolie'], 'behandling-fejl', 'Vælg venligst en af de mulige behandlingstyper');
+        validateInput(document.getElementById('aftagning'), ['med aftagning', 'uden aftagning'], 'aftagning-fejl', 'Vælg venligst en af de mulige behandlingstyper');
+        validateInput(document.getElementById('tid'), ['Mandag kl 16 og frem', 'Tirsdag kl 20 og frem', 'Onsdag kl 17 og frem', 'Torsdag kl 13 og frem', 'Lørdag kl 10 og frem', 'Søndag kl 12 og frem'], 'tid-fejl', 'Vælg venligst en af de mulige tider');
+
+        if (form.checkValidity()) {
+            // Håndter booking og videreførelse, hvis formularen er gyldig
+            handleValidForm();
+        } else {
+            // Vis fejlbeskeder, hvis formularen ikke er gyldig
+            showValidationErrors();
+        }
+
+        // Nulstil formSubmitted efter validering
+        formSubmitted = false;
+    }
+
+    function handleValidForm() {
+        var navn = document.getElementById('navn').value;
+        var email = document.getElementById('email').value;
+        var behandling = document.getElementById('behandling').value;
+        var aftagning = document.getElementById('aftagning').value;
+        var tid = document.getElementById('tid').value;
+
+        var body = 'Hej <b>' + navn + '</b><p>du har bestilt tid den ' + tid + '</p> til følgende behandling ' + behandling + aftagning + '. Jeg glæder mig til at se dig.';
+
+        var fetchUrl = 'https://jimppbookingapi.azurewebsites.net/api/NailBooking/SendBookingNotification?email=' + email + '&navn=' + navn + '&tid=' + tid + '&body=' + body;
+
+        fetch(fetchUrl, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+        })
+        .then(response => response.json())
+        .then(response => console.log(JSON.stringify(response)));
+
+        window.location.href = 'kvittering.html';
+    }
+
+    function showValidationErrors() {
+        // Vis fejlbeskeder, hvis formularen ikke er gyldig og brugeren har forsøgt at indsende den
+        if (formSubmitted) {
+            var fejlbeskeder = form.querySelectorAll('.fejlbesked');
+            fejlbeskeder.forEach(function (element) {
+                if (element.innerHTML !== '') {
+                    element.style.display = 'block';
+                }
+            });
+        }
+    }
+
+    function validateInput(inputField, validOptions, errorMessageId, errorMessage) {
+        var errorMessageElement = document.getElementById(errorMessageId);
+        
+        // Fjern eksisterende fejlbesked og nulstil klassen 'invalid'
+        errorMessageElement.innerHTML = '';
+        errorMessageElement.style.display = 'none';
+        inputField.classList.remove('invalid');
+        
+        // Tjek for tomme felter for navn og email
+        if (inputField.id === 'navn' || inputField.id === 'email') {
+            if (inputField.value.trim() === '') {
+                errorMessageElement.innerHTML = 'Fejl: ' + errorMessage;
+                errorMessageElement.style.display = 'block';
+                inputField.classList.add('invalid');
+            }
+        } else if (validOptions && !validOptions.includes(inputField.value)) {
+            errorMessageElement.innerHTML = 'Fejl: ' + errorMessage;
+            errorMessageElement.style.display = 'block';
+            inputField.classList.add('invalid');
+        }
+    }
+}); */

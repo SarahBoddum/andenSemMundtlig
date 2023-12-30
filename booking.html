@@ -93,14 +93,17 @@
             <form>
                 <label for="navn">Navn</label>
                 <input id="navn" type="text" placeholder="Leah Jensen">
+                <div class="fejlbesked" id="navn-fejl"></div>
                 
                 <label for="email">Email</label>
                 <input id="email" type="text" placeholder="leahjensen@gmail.com">
+                <div class="fejlbesked" id="email-fejl"></div>
                 <!--Skriv venligst en valid email - ellers spamer I min mand med fejlmeldinger fra API'et
                 Also - nu kan vi jo formentligt holde øje med hvornår I vurderer vores opgave ;) Hej med jer-->
                 
                 <label for="behandling">Behandling</label>
                 <input id="behandling" list="behandlingstype" placeholder="Vælg behandling">
+                <div class="fejlbesked" id="behandling-fejl"></div>
                     <datalist id="behandlingstype">
                         <option value="Shellac®"></option>
                         <option value="Shellac® - med nail art"></option>
@@ -113,16 +116,20 @@
                         <option value="Opfyldning - med nail art"></option>
                         <option value="Manicure og negleolie"></option>
                     </datalist>
+                
         
                 <label for="aftagning">Aftagning</label>
                 <input id="aftagning" list="ja-nej" placeholder="Vælg aftagning">
+                <div class="fejlbesked" id="aftagning-fejl"></div>
                     <datalist id="ja-nej">
                         <option value="med aftagning"></option>
                         <option value="uden aftagning"></option>
                     </datalist>
+
     
                 <label for="tid">Tid</label>
                 <input  id="tid" class="rullebox" list="tider" placeholder="Ledige tider">
+                <div class="fejlbesked" id="tid-fejl"></div> 
                     <datalist id="tider">
                         <option value="Mandag kl 16 og frem"></option>
                         <option value="Tirsdag kl 20 og frem"></option>
