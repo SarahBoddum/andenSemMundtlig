@@ -93,10 +93,11 @@ haandList.addEventListener('click', function() {
                 },
             })
             .then(response => response.json())
-            .then(response => console.log(JSON.stringify(response)));
-        
-            // Omdiriger kun hvis alt er i orden
-            window.location.href = 'kvittering.html';
+            .then(response => {
+                console.log(JSON.stringify(response));
+                // Omdiriger kun hvis alt er i orden
+                window.location.href = 'kvittering.html';
+            });
         }
         
         // Funktion til at nulstille fejlbeskeder
@@ -248,6 +249,7 @@ function hideColorBoxes() {
     box.classList.add('hidden');
   });
 }
+
 
 let mobilTikTok1 = document.getElementById("mobiltiktok1");
 let mobilTikTok2 = document.getElementById("mobiltiktok2");
