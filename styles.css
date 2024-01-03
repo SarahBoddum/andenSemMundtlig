@@ -194,6 +194,7 @@ header{
   background-image: url(images/Lforside.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-x: -10vw;
   padding-bottom: 20vh;
   margin-bottom: 12vh;
 }
