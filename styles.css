@@ -551,9 +551,9 @@ header{
 }
 .posrelcontainer{
     width: 30%;
-   
     padding-top: 60vh;
     padding-bottom: 10vh;
+    display: flex;
     align-items: center;
 }
 #livalaesmere{
@@ -572,14 +572,16 @@ header{
     background-position-x: -15vw;
 }
 .posabsbtn{
-  text-align: center;
-  height: 5vh;
-  width: 100%;
-  z-index: 1;
-  margin-left: 20%;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  font-size: 1.5vw;
+    background-color: #fce4f1;
+    opacity: 80%;
+    border: solid 1px black;
+    text-decoration: none;
+    width: 200%;
+    font-weight: lighter;
+    font-size: 1.4vw;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
 }
 
 
@@ -1824,21 +1826,27 @@ input{
   }
   .posrelcontainer{
     width: 90%;
-    padding-top: 40vh;
+    padding-top: 0vh;
     padding-bottom: 10vh;
     margin-left: 5%;
+   
   }
   .posabsbtn{
     font-size: 4vw;
-    margin-top: 60vh;
-    width: 60%;
-
+    margin-top: 40vh;
+    width: 90%;
+    padding: 2% 7%;
+    height: 3.5vh;
+    font-size: 4vw;
   }
  #vertikalmobil{
   font-size: 15vw;
  }
  #sarahlaesmere{
     background-position-x: -45vw;
+ }
+ .laesmere{
+    margin-bottom: 10vh;
  }
  /*---------priser---------------*/
  #priserdivtop{

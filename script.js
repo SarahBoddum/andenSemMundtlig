@@ -98,6 +98,11 @@ haandList.addEventListener('click', function() {
                 // Omdiriger kun hvis alt er i orden
                 window.location.href = 'kvittering.html';
             });
+
+            /* det der stod før, der var forkert
+            .then(response => console.log(JSON.stringify(response)) )
+   
+            window.location.href = 'kvittering.html';*/
         }
         
         // Funktion til at nulstille fejlbeskeder
