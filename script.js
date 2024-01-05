@@ -3,7 +3,14 @@ const overlay = document.getElementById('menu');
 const omList = document.getElementById('omlist');
 const haandList = document.getElementById ('haandlist');
 const bodyElement = document.body;
-const bookBtn = document.getElementById('bookbtn')
+const bookBtn = document.getElementById('bookbtn');
+const kvitteringsdiv = document.getElementById('kvitteringsdiv');
+const bookingdiv = document.getElementById('bookingdiv');
+
+if(kvitteringsdiv !== null) {
+    kvitteringsdiv.style.display = "none";
+}
+
 
 
 burgerMenu.addEventListener('click', function() {
@@ -82,8 +89,7 @@ haandList.addEventListener('click', function() {
         
             // Konstruer besked og send booking
             let body = 'Hej <b>' + navn + '</b><p>du har bestilt tid den ' + tid + '</p> til følgende behandling ' + behandling + aftagning + '. Jeg glæder mig til at se dig. ';
-        
-            var fetchUrl = 'https://jimppbookingapi.azurewebsites.net/api/NailBooking/SendBookingNotification?email=' + email + '&navn=' + navn + '&tid=' + tid + '&body=' + body;
+            var fetchUrl = 'https://jimppbookingapi.azurewebsites.net/api/NailBooking/SendBookingNotification?email=' + email + '&navn=' + navn + '&tid=' + tid + '&body=' + body + '&behandling=' + behandling + '&aftagning=' + aftagning;
         
             fetch(fetchUrl, {
                 method: 'POST',
@@ -94,9 +100,25 @@ haandList.addEventListener('click', function() {
             })
             .then(response => response.json())
             .then(response => {
-                console.log(JSON.stringify(response));
+                var json = JSON.stringify(response);
+                var data = JSON.parse(json);
+                console.log(data);
+                console.log(data.name);
+
+                kvitteringsdiv.style.display = "block";
+                bookingdiv.style.display = "none";
+
+                let bookingnummer = document.getElementById('bookingnummer');
+                let tidkvit = document.getElementById('tidkvit');
+                let behandlingkvit = document.getElementById('behandlingkvit');
+                let aftagningkvit = document.getElementById('aftagningkvit');
+
+                bookingnummer.innerHTML = data.bookingId;
+                tidkvit.innerHTML = data.tid;
+                behandlingkvit.innerHTML = data.behandling;
+                aftagningkvit.innerHTML = data.aftagning;
                 // Omdiriger kun hvis alt er i orden
-                window.location.href = 'kvittering.html';
+                //window.location.href = 'kvittering.html';
             });
 
             /* det der stod før, der var forkert
@@ -269,17 +291,21 @@ let hoejrepil = document.getElementById("højrepil");
 // Array
 
 let carousel = [mobilTikTok1, mobilTikTok2, mobilTikTok3, mobilTikTok4];
+if (mobilTikTok1 !== null) {
+    mobilTikTok1.style.display = "block";
+    mobilTikTok2.style.display = "none";
+    mobilTikTok3.style.display = "none";
+    mobilTikTok4.style.display = "none"; 
+}
 
-mobilTikTok1.style.display = "block";
-mobilTikTok2.style.display = "none";
-mobilTikTok3.style.display = "none";
-mobilTikTok4.style.display = "none"; 
-
+if (hoejrepil !== null) {
+    hoejrepil.addEventListener("click", naesteFilm);
+    venstrepil.addEventListener("click", forrigeFilm);
+}
 
 
 // Knapper med billeder af pile
-hoejrepil.addEventListener("click", naesteFilm);
-venstrepil.addEventListener("click", forrigeFilm);
+
 
 
 function naesteFilm(){
