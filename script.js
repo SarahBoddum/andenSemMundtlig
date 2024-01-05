@@ -7,9 +7,9 @@ const bookBtn = document.getElementById('bookbtn');
 const kvitteringsdiv = document.getElementById('kvitteringsdiv');
 const bookingdiv = document.getElementById('bookingdiv');
 
-if(kvitteringsdiv !== null) {
+/*if(kvitteringsdiv !== null) {
     kvitteringsdiv.style.display = "none";
-}
+}*/
 
 
 

@@ -1480,18 +1480,10 @@ input{
 }
 
 #kvitteringsdiv p{
-  margin-left: 15%;
-  line-height: 200%;
+  line-height: 200%; 
+  margin-right: 1%;
 }
-.divp{
-    margin-left: 15%;
-    line-height: 200%;
-}
-#linjehjalp{
-    display: flex;
-    width: 50%;
-   
-}
+
 #livasignatur{
   font-size: 3vw;
   text-align: center;
@@ -1508,10 +1500,16 @@ input{
 }
 .datainput{
     font-weight: lighter;
-    margin-left: 15%;
     width: fit-content;
 }
-
+.hjaelp{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+}
+.marginleft{
+    margin-left: 15%;
+}
 #bookingnummer{
     margin-left: 25%;
     margin-top: 2vh;
@@ -2114,7 +2112,7 @@ input{
 
 /*----------kvittering -----*/
 #kvitteringsdiv{
-  width: 60%;
+  width: 80%;
   padding-top: 4vh;
 }
 
@@ -2124,21 +2122,27 @@ input{
 #kvitteringsdiv h2{
   margin-left: 30%;
   font-size: 5vw;
+  margin-top: -3vh;
+  margin-bottom: 3vh;
 }
 
-#kvitteringsdiv p{
-  margin-left: 12%;
+.hjaelp{
+    flex-wrap: wrap;
 }
 #kvitteringbtndiv{
   flex-direction: column;
   margin-top: 4vh;
   gap: 4vh;
 }
+
 .kvitteringsbtn{
   width: 100%;
   text-align: center;
   padding-top: 1.5vh;
   font-size: 4vw;
+}
+#bookingnummer{
+    font-size: 5vw;
 }
 }
 /*-----------footer---------*/
