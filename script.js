@@ -7,6 +7,23 @@ const bookBtn = document.getElementById('bookbtn');
 const kvitteringsdiv = document.getElementById('kvitteringsdiv');
 const bookingdiv = document.getElementById('bookingdiv');
 
+document.addEventListener('DOMContentLoaded', function () {
+  let rammeToBilleder = document.querySelectorAll("#rammeTo .Etpic");
+  let rammeTreBilleder = document.querySelectorAll("#rammeTre .Etpic");
+  let rammeFireBilleder = document.querySelectorAll("#rammeFire .Etpic");
+
+  function tilføjForskydning(billeder, forskydning) {
+    billeder.forEach((billede, index) => {
+      let animationDelay = index * forskydning;
+      billede.style.animationDelay = animationDelay + 's';
+    });
+  }
+
+  tilføjForskydning(rammeToBilleder, 0.4);
+  tilføjForskydning(rammeTreBilleder, 0.8);
+  tilføjForskydning(rammeFireBilleder, 1.2);
+});
+
 if(kvitteringsdiv !== null) {
     kvitteringsdiv.style.display = "none";
 }

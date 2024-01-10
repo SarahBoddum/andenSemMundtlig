@@ -191,29 +191,30 @@ header{
 #forsidediv{
   width: 100%;
   height: auto;
-  background-image: url(images/Lforside.jpg);
-  background-size: 110%;
+  background-image: url(images/nyforside1.jpg);
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position-x: -10vw;
+  background-position-y: 120px;
   padding-bottom: 20vh;
-  margin-bottom: 12vh;
+  margin-bottom: 8vh;
 }
 #forsideh1-1{
-  padding-top:25vh;
+  padding-top: 28vh;
   text-align: center;
   font-size: 7vw;
+  margin-left: 50%;
 }
 #forsideh2-1{
   font-size: 4vw;
-  text-align: center;
   margin-top: -5vh;
+  margin-left: 65%;
 }
 #forsidebtndiv{
   width: 40%;
-  margin-left: 27%;
+  margin-left: 30%;
   display: flex;
   justify-content: space-between;
-  margin-top: 40vh;
+  margin-top: 20vh;
 }
 .forsidebtn{
   width: 20%;
@@ -286,7 +287,7 @@ header{
   position: absolute;
   top: 0;
   left: 0;
-  width: 25%;
+  width: 100%;
   height: 80vh;
   background-position: center;
   background-size: contain;
@@ -331,21 +332,22 @@ header{
   -webkit-animation: fade 20s infinite;
   animation: fade 20s infinite;
 }
+
 #Etpic-1{
   animation-delay: 0s;
-  background-image: url(images/Lflip1-1.jpg);
+  background-image: url(images/karusel2Q.jpg);
 }
 #Etpic-2{
   animation-delay: 5s;
-  background-image: url(images/Lflip2-1.jpg);
+  background-image: url(images/karusel2aQ.jpg);
 }
 #Etpic-3{
   animation-delay: 10s;
-  background-image: url(images/Lflip3-1.jpg);
+  background-image: url(images/karusel3Q.jpg);
 }
 #Etpic-4{
   animation-delay: 15s;
-  background-image: url(images/Mflip4-1.jpg);
+  background-image: url(images/karusel4aQ.jpg);
 }
 
 
