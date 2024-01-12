@@ -89,7 +89,8 @@ haandList.addEventListener('click', function() {
         
             // Valider navn og email
             validateNotEmpty(navn, "navn-fejl", "Navn må ikke være tomt.");
-            validateNotEmpty(email, "email-fejl", "Email må ikke være tomt.");
+            validateEmail(email, "email-fejl", "Indtast en gyldig e-mail-adresse.");
+
         
             // Valider valgte behandling og aftagning
             validateOption(behandling, ["Shellac®", "Shellac® - med nail art", "Forstærkning", "Forstærkning - enkelt farve", "Forstærkning - med nail art", "Forlængelse - enkelt farve", "Forlængelse - med nail art", "Opfyldning - enkelt farve", "Opfyldning - med nail art", "Manicure og negleolie"], "behandling-fejl", "Vælg en gyldig behandling.");
@@ -134,14 +135,8 @@ haandList.addEventListener('click', function() {
                 tidkvit.innerHTML = data.tid;
                 behandlingkvit.innerHTML = data.behandling;
                 aftagningkvit.innerHTML = data.aftagning;
-                // Omdiriger kun hvis alt er i orden
-                //window.location.href = 'kvittering.html';
+            
             });
-
-            /* det der stod før, der var forkert
-            .then(response => console.log(JSON.stringify(response)) )
-   
-            window.location.href = 'kvittering.html';*/
         }
         
         // Funktion til at nulstille fejlbeskeder
@@ -158,7 +153,14 @@ haandList.addEventListener('click', function() {
                 document.getElementById(fejlId).innerHTML = fejlbesked;
             }
         }
-        
+
+        function validateEmail(email, fejlId, fejlbesked) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+              document.getElementById(fejlId).innerHTML = fejlbesked;
+          }
+        }
+
         // Funktion til at validere valgte option mod en liste af gyldige muligheder
         function validateOption(valgtVærdi, gyldigeMuligheder, fejlId, fejlbesked) {
             if (!gyldigeMuligheder.includes(valgtVærdi)) {
