@@ -2264,6 +2264,7 @@ footer a{
 
 /*---------galleri-------*/
 
+
 #mainGalleri{
   padding-bottom: 100px;
   
@@ -2291,9 +2292,11 @@ footer a{
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
   margin-left: 5%;
   margin-right: 5%;
-}
+} 
+
 
 #slutGalleri {
   margin-bottom: 7%;
@@ -2313,12 +2316,23 @@ footer a{
   width: 40vw;
   height: 40vw;
   margin-top: 20vh;
-}
+} 
+
+
+
+
+
+
+
+
+
+
+
+
 
 .galleriMobil {
   display: none;
-}
-
+} 
 
 @media only screen and (max-width: 992px){
 
