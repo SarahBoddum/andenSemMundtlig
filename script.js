@@ -181,6 +181,22 @@ haandList.addEventListener('click', function() {
 
     });
 
+    /* for validering af navn (for og efter)
+    validateNotEmpty(navn, "navn-fejl", "Navn må ikke være tomt.");
+validateFullName(navn, "navn-fejl", "Indtast både fornavn og efternavn.");
+validateEmail(email, "email-fejl", "Indtast en gyldig e-mail-adresse.");
+
+// ...
+
+// Funktion til at validere for både fornavn og efternavn
+function validateFullName(fullName, fejlId, fejlbesked) {
+    // Antager, at både fornavn og efternavn skal være til stede
+    const names = fullName.split(' ');
+    if (names.length < 2 || names.some(name => name.trim() === '')) {
+        document.getElementById(fejlId).innerHTML = fejlbesked;
+    }
+} */
+
 //play video on mouse over
 /*video1*/
 function playVideo() {
