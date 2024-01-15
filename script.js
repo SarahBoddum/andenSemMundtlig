@@ -276,22 +276,37 @@ var currentScrollPos = window.pageYOffset;
 
 /*------galleri------*/
 
-function change (element) {
-  element.classList.toggle("fullsize")
-}
 
 function change(element) {
   var isFullsize = element.classList.contains('fullsize');
 
+  // Remove 'fullsize' class from all images
   var allImages = document.querySelectorAll('.galImg');
   allImages.forEach(function (img) {
     img.classList.remove('fullsize');
   });
 
+  // Remove the existing clone if it exists
+  var clone = document.querySelector('.clone');
+  if (clone) {
+    clone.remove();
+  }
+
   if (!isFullsize) {
+    // Add 'fullsize' class to the original image
     element.classList.add('fullsize');
+
+    // Clone the clicked image and remove 'fullsize' class from the clone
+    var clone = element.cloneNode(true);
+    clone.classList.remove('fullsize');
+    clone.classList.add('clone'); // Add a class to identify the clone
+
+    // Append the clone after the original image
+    element.parentNode.insertBefore(clone, element.nextSibling);
   }
 }
+
+
 
 /*------- Farveguide ------*/
 
